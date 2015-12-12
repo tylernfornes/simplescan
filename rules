@@ -1,0 +1,9 @@
+rule scanRule
+{
+    strings:
+        $mal_string = "this is definitely a virus!" nocase
+	$mal_domain = "www.practicalmalwareanalysis.com" nocase
+
+    condition:
+        $mal_string or $mal_domain
+}
